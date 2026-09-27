@@ -52,12 +52,15 @@ ml/vision/runs/
 runs/
 *.pt
 !models/vision/best.pt
+!models/vision/rdd2022_best.pt
 *.pth
 *.onnx
 
 # Data raw extracts
 data/raw/osm/*.osm.pbf
 data/raw/satellite/
+data/rdd2022_india/images/
+data/rdd2022_india/labels/
 
 # IDE / OS
 .vscode/

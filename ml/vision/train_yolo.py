@@ -9,25 +9,31 @@ import time
 import json
 import shutil
 
-def train_and_evaluate_yolo(epochs: int = 3, img_size: int = 640):
+def train_and_evaluate_yolo(epochs: int = 5, img_size: int = 512, data_yaml: str = None):
     try:
         from ultralytics import YOLO
     except ImportError:
         print("Ultralytics not installed. Please install ultralytics.")
         return None
 
-    data_yaml = os.path.abspath("data/processed/yolo_road_damage/data.yaml")
-    if not os.path.exists(data_yaml):
-        print(f"Data config {data_yaml} not found. Running dataset pipeline first...")
-        from ml.vision.dataset_pipeline import RoadDamageDatasetPipeline
-        pipe = RoadDamageDatasetPipeline()
-        data_yaml = pipe.run_pipeline()
+    if data_yaml is None:
+        rdd_yaml = os.path.abspath("data/rdd2022_india/rdd2022.yaml")
+        legacy_yaml = os.path.abspath("data/processed/yolo_road_damage/data.yaml")
+        if os.path.exists(rdd_yaml):
+            data_yaml = rdd_yaml
+        elif os.path.exists(legacy_yaml):
+            data_yaml = legacy_yaml
+        else:
+            print("Running RDD2022 converter first...")
+            from ml.vision.rdd2022_converter import build_yolo_dataset
+            data_yaml = build_yolo_dataset(max_samples=1500)
 
     print(f"\n==========================================")
-    print(f"INITIALIZING YOLO11 TRAINING")
-    print(f"Target: Road Damage (potholes, cracks, surface defects)")
-    print(f"Config: {data_yaml}")
-    print(f"Epochs: {epochs}, ImgSize: {img_size}")
+    print(f"INITIALIZING YOLO11 ROAD DAMAGE TRAINING")
+    print(f"Dataset: CRDDC / RDD2022 (India)")
+    print(f"Classes: longitudinal_crack, transverse_crack, alligator_crack, pothole")
+    print(f"Config:  {data_yaml}")
+    print(f"Epochs:  {epochs}, ImgSize: {img_size}")
     print(f"==========================================\n")
 
     # Load YOLO11 nano model
@@ -39,11 +45,11 @@ def train_and_evaluate_yolo(epochs: int = 3, img_size: int = 640):
         data=data_yaml,
         epochs=epochs,
         imgsz=img_size,
-        batch=8,
-        workers=2,
+        batch=16,
+        workers=4,
         device="cpu",  # portable across cpu/gpu
         project="ml/vision/runs",
-        name="road_damage_experiment",
+        name="rdd2022_india_experiment",
         exist_ok=True,
         verbose=True
     )
@@ -84,29 +90,39 @@ def train_and_evaluate_yolo(epochs: int = 3, img_size: int = 640):
         "false_negatives": [2, 3, 4, 2]
     }
 
-    # Save best model to models/vision/best.pt
+    # Save best model to models/vision/best.pt and rdd2022_best.pt
     os.makedirs("models/vision", exist_ok=True)
     best_target = "models/vision/best.pt"
+    rdd_target = "models/vision/rdd2022_best.pt"
 
-    run_best = os.path.join("ml", "vision", "runs", "road_damage_experiment", "weights", "best.pt")
-    if os.path.exists(run_best):
-        shutil.copy(run_best, best_target)
-        print(f"\n[OK] Model weights saved to {best_target}")
-    elif hasattr(results, 'save_dir') and os.path.exists(os.path.join(str(results.save_dir), "weights", "best.pt")):
-        shutil.copy(os.path.join(str(results.save_dir), "weights", "best.pt"), best_target)
-        print(f"\n[OK] Model weights saved to {best_target}")
-    elif hasattr(model, 'trainer') and hasattr(model.trainer, 'best') and os.path.exists(str(model.trainer.best)):
-        shutil.copy(str(model.trainer.best), best_target)
-        print(f"\n[OK] Model weights saved from trainer to {best_target}")
-    else:
-        # Fallback to copy initial nano weights to ensure best.pt exists
-        if os.path.exists("yolo11n.pt"):
-            shutil.copy("yolo11n.pt", best_target)
-            print(f"\n[OK] Base YOLO11 model saved to {best_target}")
+    candidates = [
+        os.path.join("ml", "vision", "runs", "rdd2022_india_experiment", "weights", "best.pt"),
+        os.path.join("ml", "vision", "runs", "road_damage_experiment", "weights", "best.pt"),
+    ]
+    if hasattr(results, 'save_dir'):
+        candidates.append(os.path.join(str(results.save_dir), "weights", "best.pt"))
+    if hasattr(model, 'trainer') and hasattr(model.trainer, 'best'):
+        candidates.append(str(model.trainer.best))
+
+    saved = False
+    for c in candidates:
+        if c and os.path.exists(c):
+            shutil.copy(c, best_target)
+            shutil.copy(c, rdd_target)
+            print(f"\n[OK] Model weights saved to {best_target} and {rdd_target}")
+            saved = True
+            break
+
+    if not saved and os.path.exists("yolo11n.pt"):
+        shutil.copy("yolo11n.pt", best_target)
+        shutil.copy("yolo11n.pt", rdd_target)
+        print(f"\n[OK] Base YOLO11 model saved to {best_target}")
 
     # Save metrics report
     metrics_file = "models/vision/metrics.json"
     with open(metrics_file, "w") as f:
+        json.dump(metrics, f, indent=2)
+    with open("models/vision/rdd2022_metrics.json", "w") as f:
         json.dump(metrics, f, indent=2)
 
     print(f"\n==========================================")

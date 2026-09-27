@@ -1,0 +1,9 @@
+path: D:\Abhisek\Vangaurd\vanguard-city\data\rdd2022_india
+train: images/train
+val: images/val
+
+names:
+  0: longitudinal_crack
+  1: transverse_crack
+  2: alligator_crack
+  3: pothole
