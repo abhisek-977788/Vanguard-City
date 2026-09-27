@@ -1,0 +1,9 @@
+names:
+  0: pothole
+  1: longitudinal_crack
+  2: alligator_crack
+  3: damaged_surface
+path: D:\Abhisek\Vangaurd\vanguard-city\data\processed\yolo_road_damage
+test: test/images
+train: train/images
+val: val/images

@@ -1,0 +1,40 @@
+services:
+  # FastAPI Backend Web Service
+  - type: web
+    name: vanguard-city-api
+    env: python
+    region: singapore
+    plan: starter
+    buildCommand: "cd backend && pip install --upgrade pip && pip install -r requirements.txt"
+    startCommand: "cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DATABASE_URL
+        fromDatabase:
+          name: vanguard-postgis-db
+          property: connectionString
+      - key: ALLOWED_ORIGINS
+        value: "https://vanguard-city.vercel.app,http://localhost:3000,http://localhost:5173"
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: JWT_ALGORITHM
+        value: "HS256"
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "1440"
+      - key: OPENWEATHER_API_KEY
+        sync: false
+      - key: OPENAQ_API_KEY
+        sync: false
+      - key: SENTINELHUB_CLIENT_ID
+        sync: false
+      - key: SENTINELHUB_CLIENT_SECRET
+        sync: false
+
+databases:
+  # Managed PostgreSQL Database (Supports PostGIS extension)
+  - name: vanguard-postgis-db
+    region: singapore
+    plan: starter
+    databaseName: vanguard_city
+    user: vanguard

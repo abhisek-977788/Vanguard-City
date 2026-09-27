@@ -1,0 +1,17 @@
+{
+  "source": "https://download.geofabrik.de/",
+  "region": "India / Eastern Zone",
+  "extracted_at": "2026-09-27T08:02:21.756460",
+  "bbox": {
+    "min_lon": 85.74,
+    "min_lat": 20.21,
+    "max_lon": 85.92,
+    "max_lat": 20.38
+  },
+  "counts": {
+    "roads": 12,
+    "buildings": 10,
+    "landuse": 6
+  },
+  "attribution": "\u00a9 OpenStreetMap contributors, Data provided by Geofabrik"
+}

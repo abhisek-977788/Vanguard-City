@@ -1,0 +1,461 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1001,
+        "name": "Janpath Arterial Highway",
+        "highway": "primary",
+        "lanes": 6,
+        "maxspeed": 60,
+        "surface": "asphalt",
+        "ward_id": 1,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.84,
+            20.285
+          ],
+          [
+            85.85,
+            20.275
+          ],
+          [
+            85.86,
+            20.265
+          ],
+          [
+            85.87,
+            20.255
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1002,
+        "name": "Bhubaneswar-Cuttack Express Corridor",
+        "highway": "trunk",
+        "lanes": 6,
+        "maxspeed": 80,
+        "surface": "asphalt",
+        "ward_id": 2,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.82,
+            20.295
+          ],
+          [
+            85.81,
+            20.295
+          ],
+          [
+            85.8,
+            20.295
+          ],
+          [
+            85.79,
+            20.295
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1003,
+        "name": "Mahatma Gandhi Marg",
+        "highway": "secondary",
+        "lanes": 4,
+        "maxspeed": 50,
+        "surface": "asphalt",
+        "ward_id": 3,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.84,
+            20.305
+          ],
+          [
+            85.85,
+            20.315
+          ],
+          [
+            85.86,
+            20.325
+          ],
+          [
+            85.87,
+            20.335
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1004,
+        "name": "Sachivalaya Marg",
+        "highway": "primary",
+        "lanes": 4,
+        "maxspeed": 50,
+        "surface": "asphalt",
+        "ward_id": 4,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.82,
+            20.285
+          ],
+          [
+            85.81,
+            20.275
+          ],
+          [
+            85.8,
+            20.265
+          ],
+          [
+            85.79,
+            20.255
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1005,
+        "name": "Airport Ring Road",
+        "highway": "secondary",
+        "lanes": 4,
+        "maxspeed": 60,
+        "surface": "asphalt",
+        "ward_id": 5,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.84,
+            20.295
+          ],
+          [
+            85.85,
+            20.295
+          ],
+          [
+            85.86,
+            20.295
+          ],
+          [
+            85.87,
+            20.295
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1006,
+        "name": "Tech Park North Avenue",
+        "highway": "tertiary",
+        "lanes": 2,
+        "maxspeed": 40,
+        "surface": "concrete",
+        "ward_id": 6,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.82,
+            20.305
+          ],
+          [
+            85.81,
+            20.315
+          ],
+          [
+            85.8,
+            20.325
+          ],
+          [
+            85.79,
+            20.335
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1007,
+        "name": "Old Town Heritage Street",
+        "highway": "residential",
+        "lanes": 2,
+        "maxspeed": 30,
+        "surface": "paving_stones",
+        "ward_id": 7,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.84,
+            20.285
+          ],
+          [
+            85.85,
+            20.275
+          ],
+          [
+            85.86,
+            20.265
+          ],
+          [
+            85.87,
+            20.255
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1008,
+        "name": "Industrial Feeder Way",
+        "highway": "secondary",
+        "lanes": 4,
+        "maxspeed": 50,
+        "surface": "asphalt",
+        "ward_id": 8,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.82,
+            20.295
+          ],
+          [
+            85.81,
+            20.295
+          ],
+          [
+            85.8,
+            20.295
+          ],
+          [
+            85.79,
+            20.295
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1009,
+        "name": "Khandagiri Foothill Road",
+        "highway": "tertiary",
+        "lanes": 2,
+        "maxspeed": 40,
+        "surface": "asphalt",
+        "ward_id": 9,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.84,
+            20.305
+          ],
+          [
+            85.85,
+            20.315
+          ],
+          [
+            85.86,
+            20.325
+          ],
+          [
+            85.87,
+            20.335
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1010,
+        "name": "Patia Innovation Boulevard",
+        "highway": "primary",
+        "lanes": 6,
+        "maxspeed": 60,
+        "surface": "asphalt",
+        "ward_id": 10,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.82,
+            20.285
+          ],
+          [
+            85.81,
+            20.275
+          ],
+          [
+            85.8,
+            20.265
+          ],
+          [
+            85.79,
+            20.255
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1011,
+        "name": "Baramunda Transit Link",
+        "highway": "secondary",
+        "lanes": 4,
+        "maxspeed": 45,
+        "surface": "asphalt",
+        "ward_id": 11,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.84,
+            20.295
+          ],
+          [
+            85.85,
+            20.295
+          ],
+          [
+            85.86,
+            20.295
+          ],
+          [
+            85.87,
+            20.295
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 1012,
+        "name": "Infocity Sector 3 Service Road",
+        "highway": "service",
+        "lanes": 2,
+        "maxspeed": 30,
+        "surface": "asphalt",
+        "ward_id": 12,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.83,
+            20.295
+          ],
+          [
+            85.82,
+            20.305
+          ],
+          [
+            85.81,
+            20.315
+          ],
+          [
+            85.8,
+            20.325
+          ],
+          [
+            85.79,
+            20.335
+          ]
+        ]
+      }
+    }
+  ]
+}

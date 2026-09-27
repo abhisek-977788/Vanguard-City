@@ -1,0 +1,221 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 3001,
+        "name": "Central Commercial Business District",
+        "landuse": "commercial",
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.803,
+              20.273
+            ],
+            [
+              85.827,
+              20.273
+            ],
+            [
+              85.8282,
+              20.2958
+            ],
+            [
+              85.8042,
+              20.297
+            ],
+            [
+              85.803,
+              20.273
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 3002,
+        "name": "Ekamra Kanan Urban Ecological Park",
+        "landuse": "park",
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.832,
+              20.297
+            ],
+            [
+              85.868,
+              20.297
+            ],
+            [
+              85.8698,
+              20.3312
+            ],
+            [
+              85.8338,
+              20.333
+            ],
+            [
+              85.832,
+              20.297
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 3003,
+        "name": "Mancheswar Industrial Estate",
+        "landuse": "industrial",
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.85,
+              20.26
+            ],
+            [
+              85.89,
+              20.26
+            ],
+            [
+              85.892,
+              20.298
+            ],
+            [
+              85.852,
+              20.3
+            ],
+            [
+              85.85,
+              20.26
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 3004,
+        "name": "Patia University Institutional Zone",
+        "landuse": "education",
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.825,
+              20.32
+            ],
+            [
+              85.855,
+              20.32
+            ],
+            [
+              85.8565,
+              20.3485
+            ],
+            [
+              85.8265,
+              20.35
+            ],
+            [
+              85.825,
+              20.32
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 3005,
+        "name": "Bindu Sagar Sacred Reservoir & Buffer",
+        "landuse": "water",
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.797,
+              20.257
+            ],
+            [
+              85.813,
+              20.257
+            ],
+            [
+              85.8138,
+              20.2722
+            ],
+            [
+              85.7978,
+              20.273
+            ],
+            [
+              85.797,
+              20.257
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 3006,
+        "name": "Airport Aviation Buffer Area",
+        "landuse": "transportation",
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.773,
+              20.278
+            ],
+            [
+              85.817,
+              20.278
+            ],
+            [
+              85.8192,
+              20.3198
+            ],
+            [
+              85.7752,
+              20.322
+            ],
+            [
+              85.773,
+              20.278
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

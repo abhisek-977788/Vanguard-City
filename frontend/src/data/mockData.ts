@@ -1,0 +1,371 @@
+// Mock data simulating real municipal data
+// These will be replaced by API calls in Phase 3/4
+
+export const mockOverviewStats = {
+  overallRiskScore: 72,
+  openComplaints: 847,
+  waterStressWards: 6,
+  criticalRoadSegments: 23,
+  powerVulnerableAssets: 14,
+  potentialUnauthorizedSites: 8,
+  activeAlerts: 5,
+  resolvedToday: 34,
+}
+
+export const mockWards = [
+  { id: 1, name: 'Ward 1', riskScore: 45, population: 42000, area: 8.2, roads: 34, waterStress: 'low' },
+  { id: 2, name: 'Ward 2', riskScore: 67, population: 58000, area: 11.4, roads: 52, waterStress: 'moderate' },
+  { id: 3, name: 'Ward 3', riskScore: 82, population: 71000, area: 9.8, roads: 63, waterStress: 'high' },
+  { id: 4, name: 'Ward 4', riskScore: 38, population: 33000, area: 7.1, roads: 28, waterStress: 'low' },
+  { id: 5, name: 'Ward 5', riskScore: 91, population: 89000, area: 14.2, roads: 78, waterStress: 'critical' },
+  { id: 6, name: 'Ward 6', riskScore: 56, population: 51000, area: 10.3, roads: 45, waterStress: 'moderate' },
+  { id: 7, name: 'Ward 7', riskScore: 74, population: 63000, area: 12.1, roads: 57, waterStress: 'high' },
+  { id: 8, name: 'Ward 8', riskScore: 29, population: 28000, area: 6.4, roads: 22, waterStress: 'low' },
+  { id: 9, name: 'Ward 9', riskScore: 88, population: 95000, area: 15.7, roads: 89, waterStress: 'critical' },
+  { id: 10, name: 'Ward 10', riskScore: 61, population: 47000, area: 9.2, roads: 41, waterStress: 'moderate' },
+  { id: 11, name: 'Ward 11', riskScore: 43, population: 38000, area: 8.0, roads: 33, waterStress: 'low' },
+  { id: 12, name: 'Ward 12', riskScore: 77, population: 72000, area: 13.5, roads: 66, waterStress: 'high' },
+  { id: 13, name: 'Ward 13', riskScore: 55, population: 49000, area: 9.9, roads: 44, waterStress: 'moderate' },
+  { id: 14, name: 'Ward 14', riskScore: 87, population: 83000, area: 14.8, roads: 74, waterStress: 'critical' },
+  { id: 15, name: 'Ward 15', riskScore: 33, population: 31000, area: 7.6, roads: 27, waterStress: 'low' },
+]
+
+export const mockComplaints = [
+  {
+    id: 'CMP-2024-0847',
+    category: 'road',
+    title: 'Large pothole near Government School',
+    description: 'The road near the school has a huge pothole and becomes dangerous after rain.',
+    ward: 'Ward 14',
+    location: { lat: 20.2961, lng: 85.8245 },
+    severity: 'high',
+    status: 'in_progress',
+    department: 'Roads & Infrastructure',
+    submittedAt: '2024-01-15T09:23:00Z',
+    aiClassification: { category: 'road_damage', confidence: 0.94, keywords: ['pothole', 'school', 'rain'] },
+    assignedTo: 'Rajesh Kumar',
+    citizenName: 'Priya Sharma',
+  },
+  {
+    id: 'CMP-2024-0846',
+    category: 'water',
+    title: 'No water supply for 3 days',
+    description: 'Our area has not received water supply for the past 3 days.',
+    ward: 'Ward 9',
+    location: { lat: 20.2901, lng: 85.8312 },
+    severity: 'critical',
+    status: 'open',
+    department: 'Water Supply',
+    submittedAt: '2024-01-15T08:45:00Z',
+    aiClassification: { category: 'water_supply', confidence: 0.97, keywords: ['water', 'supply', 'shortage'] },
+    assignedTo: null,
+    citizenName: 'Arun Mishra',
+  },
+  {
+    id: 'CMP-2024-0845',
+    category: 'electricity',
+    title: 'Street light not working for 2 weeks',
+    description: 'Multiple street lights on Main Road are not working, creating safety concerns at night.',
+    ward: 'Ward 7',
+    location: { lat: 20.3021, lng: 85.8178 },
+    severity: 'moderate',
+    status: 'under_review',
+    department: 'Electrical',
+    submittedAt: '2024-01-14T18:30:00Z',
+    aiClassification: { category: 'street_light', confidence: 0.89, keywords: ['street light', 'safety', 'night'] },
+    assignedTo: 'Sunita Patel',
+    citizenName: 'Mohan Das',
+  },
+  {
+    id: 'CMP-2024-0844',
+    category: 'drainage',
+    title: 'Drain overflow flooding street',
+    description: 'The drainage channel near the market is overflowing and flooding the entire street.',
+    ward: 'Ward 5',
+    location: { lat: 20.2875, lng: 85.8401 },
+    severity: 'high',
+    status: 'open',
+    department: 'Drainage',
+    submittedAt: '2024-01-14T14:15:00Z',
+    aiClassification: { category: 'drainage', confidence: 0.92, keywords: ['drain', 'flood', 'market'] },
+    assignedTo: null,
+    citizenName: 'Kavitha Rao',
+  },
+  {
+    id: 'CMP-2024-0843',
+    category: 'construction',
+    title: 'Illegal construction blocking road',
+    description: 'Construction materials dumped on public road near residential area.',
+    ward: 'Ward 12',
+    location: { lat: 20.3145, lng: 85.8134 },
+    severity: 'moderate',
+    status: 'under_review',
+    department: 'Building & Construction',
+    submittedAt: '2024-01-14T10:00:00Z',
+    aiClassification: { category: 'construction', confidence: 0.78, keywords: ['construction', 'road', 'blocking'] },
+    assignedTo: 'Deepak Singh',
+    citizenName: 'Ramesh Babu',
+  },
+  {
+    id: 'CMP-2024-0842',
+    category: 'waste',
+    title: 'Garbage not collected for 5 days',
+    description: 'Garbage collection has not happened in our colony for the past 5 days.',
+    ward: 'Ward 3',
+    location: { lat: 20.3089, lng: 85.8267 },
+    severity: 'moderate',
+    status: 'resolved',
+    department: 'Sanitation',
+    submittedAt: '2024-01-13T07:30:00Z',
+    aiClassification: { category: 'waste_management', confidence: 0.95, keywords: ['garbage', 'collection', 'colony'] },
+    assignedTo: 'Geeta Devi',
+    citizenName: 'Suresh Nayak',
+  },
+]
+
+export const mockAlerts = [
+  {
+    id: 'ALT-001',
+    type: 'critical',
+    title: 'HIGH WATER STRESS — Ward 5 & Ward 9',
+    message: 'AI-predicted water deficit exceeds 35% in 2 wards. Immediate supply augmentation recommended.',
+    time: '2024-01-15T08:00:00Z',
+    ward: 'Ward 5, Ward 9',
+    icon: 'droplets',
+  },
+  {
+    id: 'ALT-002',
+    type: 'high',
+    title: 'ROAD DAMAGE DETECTED — Ward 14',
+    message: 'YOLO11 detected 4 new pothole instances. 2 classified as high severity near school zone.',
+    time: '2024-01-15T07:30:00Z',
+    ward: 'Ward 14',
+    icon: 'construction',
+  },
+  {
+    id: 'ALT-003',
+    type: 'high',
+    title: 'RISK SCORE INCREASE — Ward 9',
+    message: 'Ward 9 AI risk score increased from 71 to 88 due to combined rainfall, complaint density, and water stress.',
+    time: '2024-01-15T07:00:00Z',
+    ward: 'Ward 9',
+    icon: 'trending-up',
+  },
+  {
+    id: 'ALT-004',
+    type: 'moderate',
+    title: 'POTENTIAL UNAUTHORIZED ACTIVITY — Ward 12',
+    message: 'Satellite analysis flagged potential construction activity. Human verification required.',
+    time: '2024-01-15T06:30:00Z',
+    ward: 'Ward 12',
+    icon: 'building',
+  },
+  {
+    id: 'ALT-005',
+    type: 'moderate',
+    title: 'POWER VULNERABILITY — Storm Exposure',
+    message: 'Weather forecast indicates storm risk. 14 power assets in exposed locations identified.',
+    time: '2024-01-15T06:00:00Z',
+    ward: 'Multiple',
+    icon: 'zap',
+  },
+]
+
+export const mockWaterData = {
+  summary: {
+    totalSupply: 285, // MLD
+    predictedDemand: 342, // MLD
+    deficit: 57, // MLD
+    deficitPercent: 16.7,
+    highStressWards: 4,
+    criticalWards: 2,
+  },
+  wardWaterStatus: [
+    { ward: 'Ward 1', supply: 22, demand: 24, stress: 18 },
+    { ward: 'Ward 2', supply: 28, demand: 33, stress: 42 },
+    { ward: 'Ward 3', supply: 31, demand: 42, stress: 67 },
+    { ward: 'Ward 4', supply: 19, demand: 20, stress: 12 },
+    { ward: 'Ward 5', supply: 38, demand: 58, stress: 88 },
+    { ward: 'Ward 6', supply: 25, demand: 29, stress: 38 },
+    { ward: 'Ward 7', supply: 29, demand: 37, stress: 61 },
+    { ward: 'Ward 8', supply: 17, demand: 18, stress: 8 },
+    { ward: 'Ward 9', supply: 41, demand: 64, stress: 92 },
+    { ward: 'Ward 10', supply: 24, demand: 28, stress: 44 },
+  ],
+  historical: Array.from({ length: 30 }, (_, i) => ({
+    date: new Date(Date.now() - (29 - i) * 86400000).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' }),
+    supply: 270 + Math.random() * 30,
+    demand: 310 + Math.random() * 50,
+    predicted: 325 + Math.random() * 40,
+  })),
+}
+
+export const mockInfrastructure = {
+  summary: {
+    totalRoadLength: 1247, // km
+    damagedSegments: 89,
+    criticalSegments: 23,
+    assetsRequiringMaintenance: 156,
+    infrastructureHealth: 64, // percent
+  },
+  roadConditions: [
+    { condition: 'Good', count: 42, color: '#22c55e' },
+    { condition: 'Fair', count: 28, color: '#f59e0b' },
+    { condition: 'Poor', count: 18, color: '#f97316' },
+    { condition: 'Critical', count: 12, color: '#ef4444' },
+  ],
+  recentDetections: [
+    { id: 'DET-001', type: 'pothole', location: 'Ward 14, MG Road', confidence: 0.94, severity: 'high', detected: '2024-01-15T07:45:00Z' },
+    { id: 'DET-002', type: 'crack', location: 'Ward 9, Station Road', confidence: 0.87, severity: 'moderate', detected: '2024-01-15T06:30:00Z' },
+    { id: 'DET-003', type: 'pothole', location: 'Ward 5, Market Street', confidence: 0.91, severity: 'high', detected: '2024-01-15T05:15:00Z' },
+    { id: 'DET-004', type: 'road_damage', location: 'Ward 12, Temple Road', confidence: 0.78, severity: 'moderate', detected: '2024-01-14T16:00:00Z' },
+    { id: 'DET-005', type: 'pothole', location: 'Ward 3, College Road', confidence: 0.89, severity: 'critical', detected: '2024-01-14T14:30:00Z' },
+  ],
+}
+
+export const mockPowerData = {
+  summary: {
+    totalAssets: 342,
+    vulnerableAssets: 14,
+    weatherExposedAssets: 47,
+    stormRisk: 'moderate',
+    criticalNodes: 8,
+  },
+  assets: [
+    { id: 'PWR-001', type: 'Transformer', location: 'Ward 5, Industrial Area', condition: 'poor', vulnerability: 82 },
+    { id: 'PWR-002', type: 'Substation', location: 'Ward 9, North Grid', condition: 'fair', vulnerability: 71 },
+    { id: 'PWR-003', type: 'Transformer', location: 'Ward 14, Market Zone', condition: 'poor', vulnerability: 78 },
+    { id: 'PWR-004', type: 'Pole', location: 'Ward 7, Coastal Area', condition: 'critical', vulnerability: 94 },
+    { id: 'PWR-005', type: 'Substation', location: 'Ward 3, Central Grid', condition: 'fair', vulnerability: 65 },
+  ],
+}
+
+export const mockConstructionActivity = [
+  {
+    id: 'CON-001',
+    location: 'Ward 12, Plot 45-B, Sector 7',
+    coordinates: { lat: 20.3145, lng: 85.8134 },
+    detectedAt: '2024-01-14T10:30:00Z',
+    confidence: 0.87,
+    status: 'pending_verification',
+    area: 420, // sq meters
+    notes: 'Large structure detected. Dimensions suggest multi-storey construction. Human verification required.',
+  },
+  {
+    id: 'CON-002',
+    location: 'Ward 5, Plot 12, Green Zone',
+    coordinates: { lat: 20.2875, lng: 85.8401 },
+    detectedAt: '2024-01-13T08:15:00Z',
+    confidence: 0.72,
+    status: 'under_review',
+    area: 180,
+    notes: 'Construction materials detected in green zone buffer area. Awaiting permit verification.',
+  },
+  {
+    id: 'CON-003',
+    location: 'Ward 9, Agricultural Land, North',
+    coordinates: { lat: 20.2901, lng: 85.8312 },
+    detectedAt: '2024-01-12T14:00:00Z',
+    confidence: 0.91,
+    status: 'verified_authorized',
+    area: 650,
+    notes: 'Verified as authorized housing project under permit #BP-2023-4521.',
+  },
+  {
+    id: 'CON-004',
+    location: 'Ward 3, Riverside Strip',
+    coordinates: { lat: 20.3089, lng: 85.8267 },
+    detectedAt: '2024-01-11T11:45:00Z',
+    confidence: 0.83,
+    status: 'pending_verification',
+    area: 290,
+    notes: 'Activity detected in flood-plain restricted zone. No permit found in database.',
+  },
+  {
+    id: 'CON-005',
+    location: 'Ward 7, School Zone Buffer',
+    coordinates: { lat: 20.3021, lng: 85.8178 },
+    detectedAt: '2024-01-10T09:30:00Z',
+    confidence: 0.76,
+    status: 'under_review',
+    area: 210,
+    notes: 'Construction detected within 100m school safety zone. Verification in progress.',
+  },
+]
+
+export const mockAiInsights = [
+  {
+    id: 'INS-001',
+    ward: 'Ward 9',
+    riskScore: 88,
+    riskLevel: 'Critical',
+    summary: 'Ward 9 shows critically elevated infrastructure risk due to combined water stress, road damage density, and complaint volume.',
+    factors: {
+      road_damage: 0.28,
+      water_stress: 0.26,
+      flood_exposure: 0.18,
+      complaints: 0.16,
+      network_centrality: 0.12,
+    },
+    recommendation: 'Immediate priority: Deploy water tankers, initiate road repair on Station Road, inspect drainage network.',
+    confidence: 0.89,
+    generatedAt: '2024-01-15T08:00:00Z',
+  },
+  {
+    id: 'INS-002',
+    ward: 'Ward 14',
+    riskScore: 87,
+    riskLevel: 'Critical',
+    summary: 'Ward 14 road network shows severe deterioration with 4 high-severity pothole detections in school proximity zones.',
+    factors: {
+      road_damage: 0.38,
+      water_stress: 0.18,
+      flood_exposure: 0.14,
+      complaints: 0.22,
+      network_centrality: 0.08,
+    },
+    recommendation: 'Emergency road repair required near school zone. Estimated cost: ₹12-18 lakhs. Schedule within 72 hours.',
+    confidence: 0.92,
+    generatedAt: '2024-01-15T07:30:00Z',
+  },
+  {
+    id: 'INS-003',
+    ward: 'Ward 5',
+    riskScore: 91,
+    riskLevel: 'Critical',
+    summary: 'Ward 5 has highest composite risk score due to water critical stress (88/100), drainage failures, and high population density.',
+    factors: {
+      road_damage: 0.15,
+      water_stress: 0.35,
+      flood_exposure: 0.24,
+      complaints: 0.18,
+      network_centrality: 0.08,
+    },
+    recommendation: 'Activate emergency water supply protocol. Desilting of drainage channels required before monsoon.',
+    confidence: 0.94,
+    generatedAt: '2024-01-15T07:00:00Z',
+  },
+]
+
+export const mockRiskMapData = {
+  // Bhubaneswar approximate coordinates
+  center: { lat: 20.2961, lng: 85.8245 },
+  zoom: 12,
+  hotspots: [
+    { lat: 20.2875, lng: 85.8401, risk: 91, ward: 'Ward 5', label: 'Ward 5 - Critical' },
+    { lat: 20.2961, lng: 85.8245, risk: 88, ward: 'Ward 9', label: 'Ward 9 - Critical' },
+    { lat: 20.3145, lng: 85.8134, risk: 87, ward: 'Ward 14', label: 'Ward 14 - Critical' },
+    { lat: 20.3021, lng: 85.8178, risk: 77, ward: 'Ward 12', label: 'Ward 12 - High' },
+    { lat: 20.3089, lng: 85.8267, risk: 74, ward: 'Ward 7', label: 'Ward 7 - High' },
+    { lat: 20.2820, lng: 85.8320, risk: 67, ward: 'Ward 2', label: 'Ward 2 - Moderate' },
+    { lat: 20.3200, lng: 85.8400, risk: 43, ward: 'Ward 11', label: 'Ward 11 - Low' },
+    { lat: 20.2750, lng: 85.8150, risk: 29, ward: 'Ward 8', label: 'Ward 8 - Low' },
+  ],
+}
+
+export const mockDashboardTrend = Array.from({ length: 7 }, (_, i) => ({
+  day: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][i],
+  complaints: Math.floor(100 + Math.random() * 60),
+  resolved: Math.floor(60 + Math.random() * 50),
+  riskScore: Math.floor(65 + Math.random() * 20),
+}))

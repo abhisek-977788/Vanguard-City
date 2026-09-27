@@ -1,0 +1,395 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2001,
+        "name": "Vanguard Municipal Corporation HQ",
+        "building": "civic",
+        "building_levels": 6,
+        "height": 24.0,
+        "ward_id": 7,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.8275,
+              20.2925
+            ],
+            [
+              85.8325,
+              20.2925
+            ],
+            [
+              85.8325,
+              20.2975
+            ],
+            [
+              85.8275,
+              20.2975
+            ],
+            [
+              85.8275,
+              20.2925
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2002,
+        "name": "City General Hospital",
+        "building": "hospital",
+        "building_levels": 5,
+        "height": 20.0,
+        "ward_id": 8,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.8425,
+              20.3025
+            ],
+            [
+              85.8475,
+              20.3025
+            ],
+            [
+              85.8475,
+              20.3075
+            ],
+            [
+              85.8425,
+              20.3075
+            ],
+            [
+              85.8425,
+              20.3025
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2003,
+        "name": "Apex Public School",
+        "building": "school",
+        "building_levels": 3,
+        "height": 12.0,
+        "ward_id": 9,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.8095,
+              20.3075
+            ],
+            [
+              85.8145,
+              20.3075
+            ],
+            [
+              85.8145,
+              20.3125
+            ],
+            [
+              85.8095,
+              20.3125
+            ],
+            [
+              85.8095,
+              20.3075
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2004,
+        "name": "Tech Park Tower Alpha",
+        "building": "commercial",
+        "building_levels": 12,
+        "height": 48.0,
+        "ward_id": 10,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.8525,
+              20.2725
+            ],
+            [
+              85.8575,
+              20.2725
+            ],
+            [
+              85.8575,
+              20.2775
+            ],
+            [
+              85.8525,
+              20.2775
+            ],
+            [
+              85.8525,
+              20.2725
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2005,
+        "name": "Tech Park Tower Beta",
+        "building": "commercial",
+        "building_levels": 10,
+        "height": 40.0,
+        "ward_id": 11,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.8555,
+              20.2745
+            ],
+            [
+              85.8605,
+              20.2745
+            ],
+            [
+              85.8605,
+              20.2795
+            ],
+            [
+              85.8555,
+              20.2795
+            ],
+            [
+              85.8555,
+              20.2745
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2006,
+        "name": "Central Railway Station Terminal",
+        "building": "transportation",
+        "building_levels": 4,
+        "height": 18.0,
+        "ward_id": 12,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.8175,
+              20.2805
+            ],
+            [
+              85.8225,
+              20.2805
+            ],
+            [
+              85.8225,
+              20.2855
+            ],
+            [
+              85.8175,
+              20.2855
+            ],
+            [
+              85.8175,
+              20.2805
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2007,
+        "name": "Heritage Temple Complex",
+        "building": "heritage",
+        "building_levels": 2,
+        "height": 28.0,
+        "ward_id": 13,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.7975,
+              20.2675
+            ],
+            [
+              85.8025,
+              20.2675
+            ],
+            [
+              85.8025,
+              20.2725
+            ],
+            [
+              85.7975,
+              20.2725
+            ],
+            [
+              85.7975,
+              20.2675
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2008,
+        "name": "Greenwood Residency Apts Block A",
+        "building": "apartments",
+        "building_levels": 8,
+        "height": 32.0,
+        "ward_id": 14,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.8375,
+              20.3225
+            ],
+            [
+              85.8425,
+              20.3225
+            ],
+            [
+              85.8425,
+              20.3275
+            ],
+            [
+              85.8375,
+              20.3275
+            ],
+            [
+              85.8375,
+              20.3225
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2009,
+        "name": "Greenwood Residency Apts Block B",
+        "building": "apartments",
+        "building_levels": 8,
+        "height": 32.0,
+        "ward_id": 15,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.8415,
+              20.3245
+            ],
+            [
+              85.8465,
+              20.3245
+            ],
+            [
+              85.8465,
+              20.3295
+            ],
+            [
+              85.8415,
+              20.3295
+            ],
+            [
+              85.8415,
+              20.3245
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 2010,
+        "name": "Eastern Substation Control Center",
+        "building": "industrial",
+        "building_levels": 2,
+        "height": 8.0,
+        "ward_id": 1,
+        "source": "OpenStreetMap / Geofabrik"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              85.8625,
+              20.2975
+            ],
+            [
+              85.8675,
+              20.2975
+            ],
+            [
+              85.8675,
+              20.3025
+            ],
+            [
+              85.8625,
+              20.3025
+            ],
+            [
+              85.8625,
+              20.2975
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "model": "XGBoost Regressor",
+  "MAE_MLD": 5.41,
+  "RMSE_MLD": 6.93,
+  "MAPE_percent": 1.67,
+  "baseline_MAE_MLD": 7.89,
+  "improvement_over_baseline_pct": 31.42,
+  "train_samples": 578,
+  "test_samples": 145,
+  "feature_importance": {
+    "temperature": 0.5442,
+    "rainfall": 0.0214,
+    "month": 0.0279,
+    "day_of_week": 0.0272,
+    "demand_lag1": 0.0413,
+    "demand_rolling7": 0.2609,
+    "population": 0.0378,
+    "supply": 0.0392
+  }
+}

@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgis/postgis:15-3.3
+    container_name: vanguard_postgis
+    restart: always
+    environment:
+      POSTGRES_DB: vanguard_city
+      POSTGRES_USER: vanguard
+      POSTGRES_PASSWORD: vanguard_secure_password_2024
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../backend/app/database/init_postgis.sql:/docker-entrypoint-initdb.d/init_postgis.sql
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: vanguard_backend
+    restart: always
+    environment:
+      DATABASE_URL: postgresql+asyncpg://vanguard:vanguard_secure_password_2024@db:5432/vanguard_city
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: vanguard_city
+      POSTGRES_USER: vanguard
+      POSTGRES_PASSWORD: vanguard_secure_password_2024
+      ALLOWED_ORIGINS: http://localhost:3000,http://localhost:5173
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: vanguard_frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
